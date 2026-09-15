@@ -1,0 +1,49 @@
+---
+const services = [
+  {
+    title: "Plugin Development",
+    description:
+      "Custom Moodle plugins built and maintained around your exact workflow — not a generic marketplace fit.",
+    icon: "M4 17l6-6 4 4 6-8",
+  },
+  {
+    title: "Integrations",
+    description:
+      "SSO, SCORM/xAPI, LTI, HR and CRM connections — wiring Moodle into the rest of your stack.",
+    icon: "M8 12h8M12 8v8",
+  },
+  {
+    title: "Mobile Development",
+    description:
+      "Native and hybrid mobile experiences built around your Moodle instance, delivered as an ongoing service.",
+    icon: "M8 3h8a1 1 0 011 1v16a1 1 0 01-1 1H8a1 1 0 01-1-1V4a1 1 0 011-1zM11 18h2",
+  },
+];
+---
+
+<section class="section">
+  <div class="section-inner">
+    <span class="eyebrow">What we do</span>
+    <h2 class="section-title reveal">Development-first Moodle work</h2>
+    <p class="section-lead reveal">
+      We're developers first — the people you bring in when the default install
+      isn't enough and you need something built properly.
+    </p>
+
+    <div class="services-grid">
+      {
+        services.map((service) => (
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d={service.icon} />
+              </svg>
+            </div>
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

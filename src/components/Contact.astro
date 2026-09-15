@@ -1,0 +1,34 @@
+---
+const links = [
+  { label: "Email", value: "hello@albaeducation.dev", href: "mailto:hello@albaeducation.dev" },
+  { label: "LinkedIn", value: "/in/your-linkedin", href: "https://linkedin.com/in/your-linkedin" },
+  { label: "GitHub", value: "@your-github", href: "https://github.com/YOUR-GITHUB" },
+  { label: "Moodle Marketplace", value: "View profile", href: "https://marketplace.moodle.com/user/YOUR-ID" },
+];
+---
+
+<section class="section section-dark">
+  <div class="section-inner">
+    <span class="eyebrow">Get in touch</span>
+    <h2 class="section-title reveal">Let's talk about your Moodle stack</h2>
+    <p class="section-lead reveal">
+      Whether it's a plugin gap, an integration that's half-working, or a
+      mobile build — happy to hear about it.
+    </p>
+
+    <div class="contact-grid">
+      {
+        links.map((link) => (
+          <a class="contact-card reveal" href={link.href} target="_blank" rel="noopener">
+            <div class="label">{link.label}</div>
+            <div class="value">{link.value}</div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<footer>
+  © {new Date().getFullYear()} Alba Education · Moodle Development &amp; E-Learning · UK &amp; Spain
+</footer>

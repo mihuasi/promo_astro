@@ -1,0 +1,44 @@
+---
+const plugins = [
+  { name: "your-plugin-name (mod)", url: "https://github.com/YOUR-GITHUB/your-plugin-name" },
+  { name: "your-integration-name (local)", url: "https://github.com/YOUR-GITHUB/your-integration-name" },
+];
+---
+
+<section class="section section-dark">
+  <div class="section-inner">
+    <span class="eyebrow">Proof</span>
+    <h2 class="section-title reveal">Work that's already live</h2>
+
+    <div class="proof-card reveal">
+      <div>
+        <h3>Talking Mats</h3>
+        <p>
+          A brief, concrete description of the Talking Mats build — what you
+          delivered, what it integrates with, and the outcome for the
+          organisation. Two to three sentences, written plainly, no jargon.
+        </p>
+        <div class="proof-links">
+          <a href="https://your-talking-mats-case-study-link" target="_blank" rel="noopener">
+            Read the case study →
+          </a>
+          <a href="https://github.com/YOUR-GITHUB" target="_blank" rel="noopener">
+            See the code on GitHub →
+          </a>
+        </div>
+      </div>
+
+      <ul class="plugin-list">
+        {
+          plugins.map((plugin) => (
+            <li>
+              <a href={plugin.url} target="_blank" rel="noopener">
+                {plugin.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>
