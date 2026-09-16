@@ -1,44 +1,72 @@
 ---
-const plugins = [
-  { name: "your-plugin-name (mod)", url: "https://github.com/YOUR-GITHUB/your-plugin-name" },
-  { name: "your-integration-name (local)", url: "https://github.com/YOUR-GITHUB/your-integration-name" },
+const work = [
+  {
+    client: "Aleido Learning",
+    meta: "Sweden · 2015–2025 · Moodle / Totara / Laravel",
+    body: "Engineered the technical solution for large LMS migrations for Swedish regional government, including one of 800,000 users and several million enrolments. Built an enrolment plugin in 2015 that I maintained and extended until 2023, by which point it was a core part of the product. On one upgrade the client credited my code quality for development hours coming in significantly under estimate.",
+    link: null,
+    linkLabel: null,
+  },
+  {
+    client: "mod_goodhabits",
+    meta: "Public Moodle plugin · PHP",
+    body: "An actively used activity plugin in the official Moodle plugin directory — designed, built and maintained by me. If you want to read my code before hiring me, start here.",
+    link: "https://moodle.org/plugins/mod_goodhabits",
+    linkLabel: "View on moodle.org →",
+  },
+  {
+    client: "Talking Mats Ltd.",
+    meta: "Stirling · 2011–present · Moodle consultant",
+    body: "Built the organisation's original Moodle system in 2011 — work the client credited in part for winning Start Up Social Enterprise of the Year in 2012. Fifteen years on they're still running it as a core income stream, and I still advise on it. Their summary is that it 'just works' with minimal maintenance.",
+    link: null,
+    linkLabel: null,
+  },
+  {
+    client: "Royal Holloway, University of London",
+    meta: "Surrey · 2017–2018 · Moodle consultant",
+    body: "Managed a major platform upgrade, course rollover and archiving cycle synchronised with a Windows Server migration, for a campus of 12,000+ students and 1,800 staff. Load-tested with JMeter to keep downtime to a minimum.",
+    link: null,
+    linkLabel: null,
+  },
 ];
 ---
 
 <section class="section section-dark">
   <div class="section-inner">
-    <span class="eyebrow">Proof</span>
-    <h2 class="section-title reveal">Work that's already live</h2>
+    <span class="eyebrow">Selected work</span>
+    <h2 class="section-title reveal">Fifteen years of it holding up</h2>
+    <p class="section-lead reveal">
+      The pattern that matters most in this work isn't the launch — it's what
+      the system looks like five years later.
+    </p>
 
-    <div class="proof-card reveal">
-      <div>
-        <h3>Talking Mats</h3>
-        <p>
-          A brief, concrete description of the Talking Mats build — what you
-          delivered, what it integrates with, and the outcome for the
-          organisation. Two to three sentences, written plainly, no jargon.
-        </p>
-        <div class="proof-links">
-          <a href="https://your-talking-mats-case-study-link" target="_blank" rel="noopener">
-            Read the case study →
-          </a>
-          <a href="https://github.com/YOUR-GITHUB" target="_blank" rel="noopener">
-            See the code on GitHub →
-          </a>
-        </div>
-      </div>
-
-      <ul class="plugin-list">
-        {
-          plugins.map((plugin) => (
-            <li>
-              <a href={plugin.url} target="_blank" rel="noopener">
-                {plugin.name}
+    <div class="proof-grid">
+      {
+        work.map((item) => (
+          <article class="proof-item reveal">
+            <h3>{item.client}</h3>
+            <p class="proof-meta">{item.meta}</p>
+            <p>{item.body}</p>
+            {item.link && (
+              <a class="proof-link" href={item.link} target="_blank" rel="noopener">
+                {item.linkLabel}
               </a>
-            </li>
-          ))
-        }
-      </ul>
+            )}
+          </article>
+        ))
+      }
     </div>
+
+    <p class="proof-note reveal">
+      Earlier, as a developer at <strong>Epic Ltd. / LEO Learning</strong> and the
+       <strong> University of London Computer Centre</strong>, I was lead technical
+      developer on Moodle systems for Aviva plc, the Nursing &amp; Midwifery
+      Council and the Glasgow 2014 Commonwealth Games, and helped builed the
+       <a href="https://moodle.org/plugins/view.php?id=610" target="_blank" rel="noopener"> Individual Learning Planner </a>
+      add-on for Moodle. I also built core backend features of
+      <a href="https://pi-datametrics.com/" target="_blank" rel="noopener"> Pi Datametrics </a>
+      and launched <a href="https://squiddity.app/" target="_blank" rel="noopener">Squiddity</a>,
+      my own Flutter app for iOS and Android.
+    </p>
   </div>
 </section>
